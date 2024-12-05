@@ -1,0 +1,36 @@
+---
+about:
+  template: jolla
+  id: about-block
+  image: "img/Katsuki_Monique_2023.jpg"
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/MYKatsuki
+    - icon: linkedin
+      text: LinkedIn
+      href: www.linkedin.com/in/monique-katsuki-md-mph-35a9b029b
+    - icon: envelope
+      text: Email
+      href: "mailto:mxk1220@case.edu"  
+---
+
+::: {#about-block}
+:::
+
+# Monique Katsuki, MD, MPH, FACOG
+
+I am an OB/Gyn Hospitalist at the Cleveland Clinic in Northeastern Ohio. I completed a Bachelor of Nursing Degree at South Dakota State University and worked as a Registered Nurse in rural South Dakota before attending medical school at the University of South Dakota. After completing my OB/Gyn residency at the Cleveland Clinic in 2016, I took a position as a Staff Physician at the Cleveland Clinic. I practiced general Obstetrics & Gynecology and was a family planning provider until transitioning to a full-time OB/Gyn Hospitalist role at the Cleveland Clinic in 2020. 
+
+In addition to my role as an OB/Gyn Hospitalist I am an Assistant Professor of OB/Gyn & Reproductive Biology with the Cleveland Clinic Lerner College of Medicine of Case Western Reserve University. I have also served as a co-chair for the Cleveland Clinic Obstetrics and Gynecology Institute’s Council on Diversity, Equity, and Inclusion, I am an assistant to the Institute Patient Experience Officer, a Program Director for the Cleveland Clinic Center for Infant and Maternal Health, and Assistant Department Chair of OB/Gyn at Cleveland Clinic Hillcrest Hospital. 
+
+I completed a Master of Public Health in Maternal and Child Health at the University of Minnesota in the Spring of 2024 and am now pursuing a PhD in Clinical and Translational Science at Case Western Reserve University. My work and research centers around innovative solutions to improve quality and safety in clinical care, optimizing respectful maternity care and patient experience, and elimination of inequities in health outcomes for birthing people and infants with multidisciplinary and community collaborations. 
+
+Please feel free to [contact me](mailto:mxk1220@case.edu) if you have any questions or would like to discuss potential projects.
+
+```{=html}
+<div  style="margin: 30px; text-align: center;">
+<a class="btn btn-primary" href="https://www.marvinschmitt.com/blog/website-tutorial-quarto/" role="button" target="_blank" style="padding: 15px 30px;">View the tutorial for this template (+ download link)</a>
+</div>
+```
+
