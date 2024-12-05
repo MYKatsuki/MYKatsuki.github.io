@@ -5,8 +5,7 @@ website:
   title: "Monique Katsuki, MD, MPH, FACOG"                    # Your name
   description: "OB/Gyn Physician-Scientist"   # A brief slogan (optional)
   image: img/my_image.jpg
-  
-  favicon: img/favicon.png
+
   
   # start of the navigation bar at the top of the website
   navbar:
@@ -20,8 +19,8 @@ website:
       - text: "Dashboard"
         href: dashboard/index.qmd
       - text: "CV"
-        href: cv/index.qmd
-    
+        href: cv/index.html
+ 
     # your social media handles
     right:
       - icon: linkedin
