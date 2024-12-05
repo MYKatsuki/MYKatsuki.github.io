@@ -9,7 +9,7 @@ about:
       href: https://github.com/MYKatsuki
     - icon: linkedin
       text: LinkedIn
-      href: www.linkedin.com/in/monique-katsuki-md-mph-35a9b029b
+      href: https://www.linkedin.com/in/monique-katsuki-md-mph-35a9b029b/
     - icon: envelope
       text: Email
       href: "mailto:mxk1220@case.edu"  
