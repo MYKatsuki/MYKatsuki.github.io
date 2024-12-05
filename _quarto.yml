@@ -25,12 +25,12 @@ website:
     # your social media handles
     right:
       - icon: linkedin
-        href: www.linkedin.com/in/monique-katsuki-md-mph-35a9b029b
+        text: LinkedIn
+        href: https://www.linkedin.com/in/monique-katsuki-md-mph-35a9b029b
       - icon: envelope
-        aria-label: email
-        href: "mailto:mxk1220@case.edu"  
-  
-  
+        text: email
+        href: mailto:mxk1220@case.edu 
+
 
 # Don't touch unless you know what you are doing :) ------------
   search: 
