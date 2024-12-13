@@ -1,0 +1,19 @@
+---
+title: "NHANES BMI Analysis Dashboard"
+format: 
+  html:
+    theme: cosmo
+    toc: true
+runtime: shiny
+---
+
+## Introduction
+
+This includes analyses of different sociodemographic factors and their impact on BMI for adult females (age 20-79) in the United States included in the 2017-2020 NHANES study. 
+
+## Data Summary
+
+```{r}
+
+```
+

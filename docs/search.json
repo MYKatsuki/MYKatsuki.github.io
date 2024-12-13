@@ -12,5 +12,54 @@
     "title": "Curriculum Vitae",
     "section": "",
     "text": "Click the button below to download my CV:\n\n  Download CV"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Welcome to my blog!\nHere’s my post on my analyses of NHANES data: - NHANES Analysis"
+  },
+  {
+    "objectID": "blog/nhanes-analysis.html",
+    "href": "blog/nhanes-analysis.html",
+    "title": "NHANES Data Analyses",
+    "section": "",
+    "text": "For my final project for Biostatistics 431 I chose to analyze publicly available data from the NHANES database (2017-2020). I chose to focus on analyses exploring the relationship between Body Mass Index (BMI) for adult (age 18-79) females in the cohort and other variables available in the data set."
+  },
+  {
+    "objectID": "blog/nhanes-analysis.html#introduction",
+    "href": "blog/nhanes-analysis.html#introduction",
+    "title": "NHANES Data Analyses",
+    "section": "",
+    "text": "For my final project for Biostatistics 431 I chose to analyze publicly available data from the NHANES database (2017-2020). I chose to focus on analyses exploring the relationship between Body Mass Index (BMI) for adult (age 18-79) females in the cohort and other variables available in the data set."
+  },
+  {
+    "objectID": "blog/nhanes-analysis.html#methods-results",
+    "href": "blog/nhanes-analysis.html#methods-results",
+    "title": "NHANES Data Analyses",
+    "section": "Methods & Results",
+    "text": "Methods & Results\nI completed five analyses as a part of this project.\nAnalysis A - Differences in BMI and waist circumference for adult males and female in the cohort.\nAnalysis B\nAnalysis C\nAnalysis D\nAnalysis 2"
+  },
+  {
+    "objectID": "dashboard/BMI_analyses.html",
+    "href": "dashboard/BMI_analyses.html",
+    "title": "NHANES BMI Analysis Dashboard",
+    "section": "",
+    "text": "This includes analyses of different sociodemographic factors and their impact on BMI for adult females (age 20-79) in the United States included in the 2017-2020 NHANES study."
+  },
+  {
+    "objectID": "dashboard/BMI_analyses.html#introduction",
+    "href": "dashboard/BMI_analyses.html#introduction",
+    "title": "NHANES BMI Analysis Dashboard",
+    "section": "",
+    "text": "This includes analyses of different sociodemographic factors and their impact on BMI for adult females (age 20-79) in the United States included in the 2017-2020 NHANES study."
+  },
+  {
+    "objectID": "dashboard/BMI_analyses.html#data-summary",
+    "href": "dashboard/BMI_analyses.html#data-summary",
+    "title": "NHANES BMI Analysis Dashboard",
+    "section": "Data Summary",
+    "text": "Data Summary"
   }
 ]

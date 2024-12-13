@@ -1,0 +1,17 @@
+{
+  "hash": "343b422fddbff0e7ff1d6caeb87e823c",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"NHANES BMI Analysis Dashboard\"\nformat: \n  html:\n    theme: cosmo\n    toc: true\nruntime: shiny\n---\n\n\n\n## Introduction\n\nThis includes analyses of different sociodemographic factors and their impact on BMI for adult females (age 20-79) in the United States included in the 2017-2020 NHANES study. \n\n## Data Summary\n\n\n\n::: {.cell}\n\n:::\n",
+    "supporting": [
+      "BMI_analyses_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

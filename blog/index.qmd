@@ -1,0 +1,8 @@
+---
+title: "Blog"
+format: html
+---
+
+# Welcome to my blog!
+
+Here's my post on my analyses of NHANES data: - [NHANES Analysis](nhanes-analysis.html)

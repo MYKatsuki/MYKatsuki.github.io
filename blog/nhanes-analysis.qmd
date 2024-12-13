@@ -1,0 +1,23 @@
+---
+title: "NHANES Data Analyses"
+date: "2024-12-11"
+format: html
+---
+
+## Introduction
+
+For my final project for Biostatistics 431 I chose to analyze publicly available data from the NHANES database (2017-2020). I chose to focus on analyses exploring the relationship between Body Mass Index (BMI) for adult (age 18-79) females in the cohort and other variables available in the data set. 
+
+## Methods & Results
+
+I completed five analyses as a part of this project. 
+
+Analysis A - Differences in BMI and waist circumference for adult males and female in the cohort. 
+
+Analysis B 
+
+Analysis C
+
+Analysis D
+
+Analysis 2 
