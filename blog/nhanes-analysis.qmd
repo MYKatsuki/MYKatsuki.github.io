@@ -6,18 +6,28 @@ format: html
 
 ## Introduction
 
-For my final project for Biostatistics 431 I chose to analyze publicly available data from the NHANES database (2017-2020). I chose to focus on analyses exploring the relationship between Body Mass Index (BMI) for adult (age 18-79) females in the cohort and other variables available in the data set. 
+For my final project for Biostatistics 431 I chose to practice data managment and analytics skills used in the course to analyze publicly available data from the NHANES database 2017-2020 (found at: <https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?Cycle=2017-2020>).
+
+Because Body Mass Index (BMI) is in important factor related to many health outcomes and is a condition with rapidly increasing prevalence in the United States, I chose to focus on analyses exploring the relationship between BMI and other variables available in the data set. Because my clinical work is focused on care for females, I narrowed my analyses to adult (age 18-79) females in the cohort. I am also especially interested in sociodemographic variables and how they influence and are associated with health outcomes so I chose these types of variables for my analyses.
 
 ## Methods & Results
 
-I completed five analyses as a part of this project. 
+I completed several analyses as a part of this project.
 
-Analysis A - Differences in BMI and waist circumference for adult males and female in the cohort. 
+Analysis 1 - Differences in BMI and waist circumference for adult males and female in the cohort
 
-Analysis B 
+The first analysis I undertook was comparing BMI and waist circumference between adult males and females in the cohort to look for differences based on sex. After downloading and cleaning the data I found that the BMI data was not normally distributed (right skewed) using a histogram to visualize the data. Therefore I used a bootstrap approach to compare means. Interestingly, I found that the 95% confidence interval for the mean_difference in BMI between males and females was (0.8838349 to 1.5414805) with females having a higher BMI than males. The 95% confidence interval for mean_difference in waist circumference was (-3.548739 to -2.005443), with males having a larger waist circumference. With both differences being statistically significant. The figure on the dashboard correlating with this analysis shows a box blot with the distribution of the values for both outcomes for males and females.
 
-Analysis C
+Analysis 2 - Comparison of BMI by Type of Insurance
 
-Analysis D
+The next analysis I'm highlighting here is BMI by type of insurance. For this analysis I only utilized data for adult females. I analyzed data for those in the cohort reporting having private, medicaid, or medicare insurance with an ANOVA and Tukey's test. The p-value for the Pr(\>F) from the ANOVA (about 8.96e-06) indicated that there are statistically significant differences in BMI among the different insurance types. Additionally, a very high level of statistical significance (p \< 0.001), suggested that the type of insurance coverage has an effect on BMI. Tukey test showed no statistically significant difference in BMI between females in the cohort reporting having Medicare or Medicaid for insurance, however there was a statistically significant difference between Medicare-Private insurance and Medicaid-Private insurance, with those with private insurance having a lower BMI. The corresponding figure on the dashboard page shows a plot of distribution of BMI by insurance type.
 
-Analysis 2 
+Analysis 3 - Comparison of BMI by Healthcare Access
+
+The next analysis I undertook was comparison of BMI by healthcare access. For this analysis I used the "Routine place to go for healthcare" data (yes/no) as reported in the NHANES Hospital Utilization & Access to Care questionnaire data. For this analysis I constructed a 2 x 2 table to calculate measures of associations for healthcare access and made BMI a binary outcome (BMI \< 25 - normal weight and BMI \> 25 - overweight). Surprisingly, I found the calculated Odds Ratio (OR) was 1.52 (95% CI; 1.25, 1.84) indicating that the odds of being overweight are 52% higher for those with healthcare access compared to those without. Thinking about this I speculate this may be those with greater and more frequent access to healthcare may be more likely to be diagnosed as overweight or obese and/or those with overweight/obesity may more frequently need to seek healthcare. The associated figure on the dashboard page shows a count of overweight status by healthcare access.
+
+Analysis 4 - Prediction of BMI by Multiple Factors
+
+The last analysis I am highlighting for this project is a predictive regression model for BMI with multiple covariates. Having invested several variables already I decided to use type of health insurance as I had seen that seemed to be associated with BMI. I also wanted to investigate additional new variables and added education level (did not graduate high school, graduated high school, college graduate), and marital status (married, not married). Given the non-normal distribution of the BMI data I performed a log transformation which yielded a much more normally appearing distribution on inspection of the resulting histogram and then used this transformed data for analysis with the model. Although the F-statistic for the model (7.678 on 6 and 2322 DF, with a p-value of 3.605e-07) was statistically significant indicating the model as a whole as being predictive, the multiple R-squared of 0.01626, suggested that only about 1.63% of the variability in BMI is explained by the model which is low, indicating a weak model fit. Therefore I decided to add age to try to strengthen the model but this only added a very modest benefit with the multiple R-squared only improving to 0.02206. It would be interesting to build and test the model further if time allowed! The associated graphic on the dashboard page shows the impact (coefficients) of predictors on the model (significant and not significant).
+
+I also conducted analysis to examine the effects of food security (utilized a food assistance program within the preceding 12 months) on BMI but did not find this to yield any significant information.
