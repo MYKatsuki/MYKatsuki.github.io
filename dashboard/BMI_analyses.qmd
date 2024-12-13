@@ -9,11 +9,233 @@ runtime: shiny
 
 ## Introduction
 
-This includes analyses of different sociodemographic factors and their impact on BMI for adult females (age 20-79) in the United States included in the 2017-2020 NHANES study. 
+This includes analyses of different sociodemographic factors and their impact on BMI for adult females (age 20-79) in the United States included in the 2017-2020 NHANES study.
 
-## Data Summary
+## Analysis 1 - Comparison of BMI & Waist Circumference by Sex
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(NHANES)
+library(haven)
+library(stats)
+library(broom)
+library(tidyverse)
+
+theme_set(theme_light())
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
 
 ```{r}
+url_2017_2020 <- "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2017/DataFiles/P_DEMO.xpt"
+
+download.file(url_2017_2020, destfile = "DEMO_J.XPT", mode = "wb")
+
+demo_2017_2020 <- read_xpt("DEMO_J.XPT")
+
+if (!dir.exists("data/demographics")) {
+  dir.create("data/demographics", recursive = TRUE)
+}
+
+saveRDS(demo_2017_2020, "data/demographics/demo_2017_2020.Rds")
 
 ```
 
+```{r}
+bmi_raw <- read_xpt("C:/Project B/Part2/ProjectBPart2/P_BMX.xpt")
+
+if (!dir.exists("data")) {
+  dir.create("data")
+}
+saveRDS(bmi_raw, "data/P_BMX.Rds")
+
+demo_data <- as_tibble(demo_2017_2020)
+
+saveRDS(demo_data, "data/demographics/demo_2017_2020.Rds")
+
+bmi_data <- as_tibble(bmi_raw)
+
+saveRDS(bmi_data, "data/P_BMX.Rds")
+
+demo_data <- readRDS("data/demographics/demo_2017_2020.Rds")
+bmi_data <- readRDS("data/P_BMX.Rds")
+
+demo_bmi <- left_join(demo_data, bmi_data, by = "SEQN")
+```
+
+```{r}
+analysisAA_data <- demo_bmi %>%
+  filter(RIDAGEYR >= 18, RIDAGEYR <= 79,
+         !is.na(BMXBMI), !is.na(BMXWAIST))
+```
+
+```{r plot-bmi-waist-circumference, echo=FALSE, fig.cap="Differences in BMI and Waist Circumference by Sex"}
+
+# Data transformation
+analysisAA_data <- analysisAA_data %>%
+  mutate(sex = ifelse(RIAGENDR == 1, "Male", "Female")) %>%
+  select(SEQN, RIAGENDR, BMXBMI, BMXWAIST, sex) %>%
+  pivot_longer(cols = c(BMXBMI, BMXWAIST), names_to = "variable", values_to = "value") %>%
+  mutate(variable = recode(variable, BMXBMI = "BMI", BMXWAIST = "Waist Circumference"))
+
+# Plotting
+p <- ggplot(analysisAA_data, aes(x = sex, y = value, fill = sex)) +
+  geom_boxplot() +
+  facet_wrap(~variable, scales = "free_y") +  # Allows different y-scales for BMI and Waist Circumference
+  labs(title = "Comparison of BMI and Waist Circumference by Sex",
+       x = "Sex",
+       y = "Measurement") +
+  theme_minimal()
+
+p 
+```
+
+## Analysis 2 - Comparison of BMI by Type of Insurance
+
+```{r bmi-ridgeline-plot, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Ridgeline Plot of BMI Distribution by Insurance Type"}
+
+hi_raw <- read_xpt("C:/Project B/Part2/ProjectBPart2/P_HIQ.xpt")
+
+if (!dir.exists("data")) {
+  dir.create("data")
+}
+saveRDS(hi_raw, "data/P_HIQ.Rds")
+
+hi_data <- as_tibble(hi_raw)
+
+saveRDS(hi_data, "data/P_HIQ.Rds")
+
+demo_bmi_hi <- left_join(demo_data, bmi_data, by = "SEQN") %>%
+               left_join(hi_data, by = "SEQN")
+
+filtered_dataC <- demo_bmi_hi %>%
+  filter(RIAGENDR == 2,            
+         RIDAGEYR >= 20,           
+         RIDAGEYR <= 79) %>%       
+  mutate(InsuranceType = case_when(
+    HIQ032A == 1 ~ "Private",
+    HIQ032B == 2 ~ "Medicare",
+    HIQ032D == 4 ~ "Medicaid",
+    TRUE ~ "Other"                 
+  )) %>%
+  filter(InsuranceType %in% c("Private", "Medicare", "Medicaid"))  
+
+filtered_dataC <- filtered_dataC %>%
+  filter(!is.infinite(BMXBMI), !is.na(BMXBMI))
+
+tryCatch({
+    insurance_bmi_ridgeline_plot <- ggplot(filtered_dataC, aes(x = BMXBMI, y = InsuranceType, fill = InsuranceType)) +
+      ggridges::geom_density_ridges() +
+      labs(title = "Ridgeline Plot of BMI Distribution by Insurance Type",
+           x = "BMI", y = "Insurance Type") +
+      theme_minimal() +
+      scale_fill_brewer(palette = "Set2")
+}, warning = function(w) {})
+
+# Display the plot
+insurance_bmi_ridgeline_plot
+```
+
+## Analysis 3 - Comparison of BMI by Healthcare Access
+
+```{r bmi-bar-chart, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="BMI Data by Healthcare Access"}
+access_raw <- read_xpt("C:/Project B/Part2/ProjectBPart2/P_HUQ.xpt")
+
+if (!dir.exists("data")) {
+  dir.create("data")
+}
+saveRDS(access_raw, "data/P_HUQ.Rds")
+
+access_data <- as_tibble(access_raw)
+
+saveRDS(access_data, "data/P_HUQ.Rds")
+
+demo_bmi_access <- left_join(demo_data, bmi_data, by = "SEQN") %>%
+               left_join(access_data, by = "SEQN")
+
+filtered_dataD <- demo_bmi_access %>%
+  filter(RIAGENDR == 2,                  
+         RIDAGEYR >= 18, RIDAGEYR <= 79, 
+         !is.na(HUQ030),                 
+         HUQ030 %in% c(1, 2)) %>%        
+  mutate(
+    HealthcareAccess = recode(HUQ030, '1' = "Yes", '2' = "No"),
+    Overweight = ifelse(BMXBMI >= 25, "Overweight", "Not Overweight")
+  )
+
+ggplot(filtered_dataD, aes(x = HealthcareAccess, fill = Overweight)) +
+  geom_bar() +
+  labs(title = "Count of Overweight Status by Healthcare Access",
+       x = "Healthcare Access",
+       y = "Count") +
+  scale_fill_brewer(palette = "Pastel1") +
+  theme_minimal()
+```
+
+## Analysis 4 - Prediction of BMI by multiple factors
+
+```{r coef-plot, echo=FALSE, fig.cap="Impact of various predictors on Log-Transformed BMI"}
+
+analysis2 <- demo_bmi_hi %>%
+  filter(RIDAGEYR >= 20, RIDAGEYR <= 79, RIAGENDR == "2")
+
+analysis2 <- analysis2 %>%
+  mutate(Education_Level = case_when(
+    DMDEDUC2 %in% c(1, 2) ~ "Did not graduate HS",
+    DMDEDUC2 == 3 ~ "HS Graduate",
+    DMDEDUC2 %in% c(4, 5) ~ "College Graduate"
+  ))
+
+analysis2 <- analysis2 %>%
+ mutate(InsuranceType = case_when(
+    HIQ032A == 1 ~ "Private",
+    HIQ032B == 2 ~ "Medicare",
+    HIQ032D == 4 ~ "Medicaid",
+    TRUE ~ "Other"                 
+  )) %>%
+  filter(InsuranceType %in% c("Private", "Medicare", "Medicaid"))
+
+analysis2 <- analysis2 %>%
+  mutate(Marital_Status = case_when(
+    DMDMARTZ %in% c(1) ~ "Married",
+    DMDMARTZ %in% c(2, 3) ~ "Not Married"
+  ))
+
+analysis2_final <- analysis2 %>%
+  select(SEQN, RIDAGEYR, BMXBMI, InsuranceType, Education_Level, Marital_Status)
+
+analysis2_cleaned <- analysis2_final %>%
+  filter(!is.na(BMXBMI)) 
+
+analysis2_cleaned <- analysis2_cleaned %>%
+  filter(!is.na(Education_Level) & !is.na(Marital_Status))
+
+analysis2_cleaned <- analysis2_cleaned %>%
+  mutate(Log_BMI = log(BMXBMI))
+
+set.seed(123)
+
+train_index <- sample(1:nrow(analysis2_cleaned), size = 0.75 * nrow(analysis2_cleaned))
+
+train_data <- analysis2_cleaned[train_index, ]
+test_data <- analysis2_cleaned[-train_index, ]
+
+model_fit <- lm(Log_BMI ~ InsuranceType + Education_Level + Marital_Status + RIDAGEYR, data = train_data)
+
+coefs <- tidy(model_fit)
+
+coefs <- coefs %>%
+  mutate(Significant = ifelse(p.value < 0.05, "Significant", "Not Significant"))
+
+ggplot(coefs, aes(x = term, y = estimate, fill = Significant)) + 
+  geom_col(show.legend = TRUE) +
+  coord_flip() +
+  labs(title = "Impact of Predictors on Log-Transformed BMI",
+       x = "Predictors",
+       y = "Coefficient Estimate") +
+  theme_minimal() +
+  scale_fill_manual(values = c("Significant" = "steelblue", "Not Significant" = "gray"))
+
+coefs$Significant <- factor(coefs$Significant, levels = c("Not Significant", "Significant"))
+```

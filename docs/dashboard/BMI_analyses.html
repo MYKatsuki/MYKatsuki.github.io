@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../dashboard/index.qmd"> 
+    <a class="nav-link active" href="../dashboard/BMI_analyses.html" aria-current="page"> 
 <span class="menu-text">Dashboard</span></a>
   </li>  
   <li class="nav-item">
@@ -114,11 +114,14 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
 <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#data-summary" id="toc-data-summary" class="nav-link" data-scroll-target="#data-summary">Data Summary</a></li>
+  <li><a href="#analysis-1---comparison-of-bmi-waist-circumference-by-sex" id="toc-analysis-1---comparison-of-bmi-waist-circumference-by-sex" class="nav-link" data-scroll-target="#analysis-1---comparison-of-bmi-waist-circumference-by-sex">Analysis 1 - Comparison of BMI &amp; Waist Circumference by Sex</a></li>
+  <li><a href="#analysis-2---comparison-of-bmi-by-type-of-insurance" id="toc-analysis-2---comparison-of-bmi-by-type-of-insurance" class="nav-link" data-scroll-target="#analysis-2---comparison-of-bmi-by-type-of-insurance">Analysis 2 - Comparison of BMI by Type of Insurance</a></li>
+  <li><a href="#analysis-3---comparison-of-bmi-by-healthcare-access" id="toc-analysis-3---comparison-of-bmi-by-healthcare-access" class="nav-link" data-scroll-target="#analysis-3---comparison-of-bmi-by-healthcare-access">Analysis 3 - Comparison of BMI by Healthcare Access</a></li>
+  <li><a href="#analysis-4---prediction-of-bmi-by-multiple-factors" id="toc-analysis-4---prediction-of-bmi-by-multiple-factors" class="nav-link" data-scroll-target="#analysis-4---prediction-of-bmi-by-multiple-factors">Analysis 4 - Prediction of BMI by multiple factors</a></li>
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">NHANES BMI Analysis Dashboard</h1>
 </div>
 
@@ -135,7 +138,42 @@ ul.task-list li input[type="checkbox"] {
 
 </header><section id="introduction" class="level2"><h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>This includes analyses of different sociodemographic factors and their impact on BMI for adult females (age 20-79) in the United States included in the 2017-2020 NHANES study.</p>
-</section><section id="data-summary" class="level2"><h2 class="anchored" data-anchor-id="data-summary">Data Summary</h2>
+</section><section id="analysis-1---comparison-of-bmi-waist-circumference-by-sex" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="analysis-1---comparison-of-bmi-waist-circumference-by-sex">Analysis 1 - Comparison of BMI &amp; Waist Circumference by Sex</h2>
+<div class="cell page-columns page-full">
+<div class="cell-output-display page-columns page-full">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full"><p><img src="BMI_analyses_files/figure-html/plot-bmi-waist-circumference-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="margin-caption">Differences in BMI and Waist Circumference by Sex</figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="analysis-2---comparison-of-bmi-by-type-of-insurance" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="analysis-2---comparison-of-bmi-by-type-of-insurance">Analysis 2 - Comparison of BMI by Type of Insurance</h2>
+<div class="cell page-columns page-full">
+<div class="cell-output-display page-columns page-full">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full"><p><img src="BMI_analyses_files/figure-html/bmi-ridgeline-plot-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="margin-caption">Ridgeline Plot of BMI Distribution by Insurance Type</figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="analysis-3---comparison-of-bmi-by-healthcare-access" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="analysis-3---comparison-of-bmi-by-healthcare-access">Analysis 3 - Comparison of BMI by Healthcare Access</h2>
+<div class="cell page-columns page-full">
+<div class="cell-output-display page-columns page-full">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full"><p><img src="BMI_analyses_files/figure-html/bmi-bar-chart-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="margin-caption">BMI Data by Healthcare Access</figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="analysis-4---prediction-of-bmi-by-multiple-factors" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="analysis-4---prediction-of-bmi-by-multiple-factors">Analysis 4 - Prediction of BMI by multiple factors</h2>
+<div class="cell page-columns page-full">
+<div class="cell-output-display page-columns page-full">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full"><p><img src="BMI_analyses_files/figure-html/coef-plot-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="margin-caption">Impact of various predictors on Log-Transformed BMI</figcaption></figure>
+</div>
+</div>
+</div>
 
 
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">

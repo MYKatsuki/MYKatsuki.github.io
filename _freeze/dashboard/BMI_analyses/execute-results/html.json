@@ -1,8 +1,8 @@
 {
-  "hash": "343b422fddbff0e7ff1d6caeb87e823c",
+  "hash": "13bdfd783f8a78a34298bfead9d2f77f",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"NHANES BMI Analysis Dashboard\"\nformat: \n  html:\n    theme: cosmo\n    toc: true\nruntime: shiny\n---\n\n\n\n## Introduction\n\nThis includes analyses of different sociodemographic factors and their impact on BMI for adult females (age 20-79) in the United States included in the 2017-2020 NHANES study. \n\n## Data Summary\n\n\n\n::: {.cell}\n\n:::\n",
+    "markdown": "---\ntitle: \"NHANES BMI Analysis Dashboard\"\nformat: \n  html:\n    theme: cosmo\n    toc: true\nruntime: shiny\n---\n\n\n\n## Introduction\n\nThis includes analyses of different sociodemographic factors and their impact on BMI for adult females (age 20-79) in the United States included in the 2017-2020 NHANES study.\n\n## Analysis 1 - Comparison of BMI & Waist Circumference by Sex\n\n\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![Differences in BMI and Waist Circumference by Sex](BMI_analyses_files/figure-html/plot-bmi-waist-circumference-1.png){width=672}\n:::\n:::\n\n\n\n## Analysis 2 - Comparison of BMI by Type of Insurance\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![Ridgeline Plot of BMI Distribution by Insurance Type](BMI_analyses_files/figure-html/bmi-ridgeline-plot-1.png){width=672}\n:::\n:::\n\n\n\n## Analysis 3 - Comparison of BMI by Healthcare Access\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![BMI Data by Healthcare Access](BMI_analyses_files/figure-html/bmi-bar-chart-1.png){width=672}\n:::\n:::\n\n\n\n## Analysis 4 - Prediction of BMI by multiple factors\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![Impact of various predictors on Log-Transformed BMI](BMI_analyses_files/figure-html/coef-plot-1.png){width=672}\n:::\n:::\n",
     "supporting": [
       "BMI_analyses_files"
     ],

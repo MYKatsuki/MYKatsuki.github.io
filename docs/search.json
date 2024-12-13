@@ -56,10 +56,31 @@
     "text": "This includes analyses of different sociodemographic factors and their impact on BMI for adult females (age 20-79) in the United States included in the 2017-2020 NHANES study."
   },
   {
-    "objectID": "dashboard/BMI_analyses.html#data-summary",
-    "href": "dashboard/BMI_analyses.html#data-summary",
+    "objectID": "dashboard/BMI_analyses.html#analysis-1---comparison-of-bmi-waist-circumference-by-sex",
+    "href": "dashboard/BMI_analyses.html#analysis-1---comparison-of-bmi-waist-circumference-by-sex",
     "title": "NHANES BMI Analysis Dashboard",
-    "section": "Data Summary",
-    "text": "Data Summary"
+    "section": "Analysis 1 - Comparison of BMI & Waist Circumference by Sex",
+    "text": "Analysis 1 - Comparison of BMI & Waist Circumference by Sex\n\n\n\n\nDifferences in BMI and Waist Circumference by Sex"
+  },
+  {
+    "objectID": "dashboard/BMI_analyses.html#analysis-2---comparison-of-bmi-by-type-of-insurance",
+    "href": "dashboard/BMI_analyses.html#analysis-2---comparison-of-bmi-by-type-of-insurance",
+    "title": "NHANES BMI Analysis Dashboard",
+    "section": "Analysis 2 - Comparison of BMI by Type of Insurance",
+    "text": "Analysis 2 - Comparison of BMI by Type of Insurance\n\n\n\n\nRidgeline Plot of BMI Distribution by Insurance Type"
+  },
+  {
+    "objectID": "dashboard/BMI_analyses.html#analysis-3---comparison-of-bmi-by-healthcare-access",
+    "href": "dashboard/BMI_analyses.html#analysis-3---comparison-of-bmi-by-healthcare-access",
+    "title": "NHANES BMI Analysis Dashboard",
+    "section": "Analysis 3 - Comparison of BMI by Healthcare Access",
+    "text": "Analysis 3 - Comparison of BMI by Healthcare Access\n\n\n\n\nBMI Data by Healthcare Access"
+  },
+  {
+    "objectID": "dashboard/BMI_analyses.html#analysis-4---prediction-of-bmi-by-multiple-factors",
+    "href": "dashboard/BMI_analyses.html#analysis-4---prediction-of-bmi-by-multiple-factors",
+    "title": "NHANES BMI Analysis Dashboard",
+    "section": "Analysis 4 - Prediction of BMI by multiple factors",
+    "text": "Analysis 4 - Prediction of BMI by multiple factors\n\n\n\n\nImpact of various predictors on Log-Transformed BMI"
   }
 ]
