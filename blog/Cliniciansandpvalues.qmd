@@ -1,0 +1,37 @@
+---
+title: "Beyond p < 0.05: A Clinician's Perspective on the Guarantee in a Box"
+date: 2025-03-23
+format: html
+---
+
+# Beyond p \< 0.05: A Clinician's Perspective on the Guarantee in a Box
+
+At this point in my life, I have been through nursing school, medical school, residency, and a Master of Public Health program and have been clearly taught through all of it the importance of p values and statistical significance. Not until starting classes in my PhD program did, I hear about the concept that p values and “statistical significance,” especially in the context of clinical decision-making are actually essentially useless, potentially harmful, and that we really shouldn’t be using them.
+
+While I think this concept is largely unheard of in the clinical realm, it’s not new in the world of statistics and [Wasserstein, et al’s editorial](https://doi.org/10.1080/00031305.2019.1583913) published in The American Statistician in 2019 clearly outlines why we should not be (should never have been) using p values the way we do, and what we should be doing instead. (Wasserstein, 2019) This was published after the *ASA Statement on p-Values and Statistical Significance* was released in 2016 (almost 10 years ago!) and was basically ignored. (Wasserstein, 2016)
+
+The problems with p values, that I am now understanding and that I think most training and working in the clinical realm do not understand, are:
+
+1\) P values, 0.05 or otherwise, are made up cut off points and no matter what you get as your p value (with whatever cut off point you have designated) it does not actually mean an association or effect exists if your value falls below the cut off or that no association or effect exists if your value is above the cut off.
+
+2\) P values are purely theoretical statistical constructs, they and “statistical I significance” have absolutely nothing to do and no correlation with practical and/or clinical importance.
+
+I can tell you right now that this is antithetical to what is taught in the clinical realm, and it’s going to be really hard to change this deeply entrenched erroneous understanding. Wasserstein, et al acknowledge this in the editorial - “\[B\]inary decision making is indispensable in medicine and related fields.” (Wasserstein, 2019) This is a nice way of saying that clinicians like straightforward, yes or no answers. We are expected to be the experts in our respective fields with definitive, evidence-based answers about what is best for our patients, and a binary test telling us important or not important, good or bad, is really helpful to be able to do this.
+
+Given what I have learned though, I can already see how this misunderstanding and misuse of p values is harmful and why it is so important that it changes. One of my jobs currently is regularly reporting out on clinical outcomes data to my peers, especially on inequities in outcomes data. One recent presentation was on severe maternal morbidity. I worked on the presentation with a team who analyzed and presented the outcomes for different populations with p values. Everyone wanted to focus on the areas where “statistically significant” differences were noted but it was very clear to me that there were outcomes with clear differences that though not “statistically significant” are very clinically important and meaningful (e.g., maternal ICU admission).
+
+So how do we bridge this gap and change practices around p values in the clinical realm? I like several suggestions in the editorial.
+
+First, a shift toward “metanalytic thinking.” Intuitively this makes so much sense, to “remember that one study is rarely enough.” This instantly made me think of another example of the danger of the current use of p values and “statistical significance” in my field, the ARRIVE trial. (Grobman, 2018) This results of this **single** study were released – “Induction of labor at 39 weeks in low-risk nulliparous women did not result in a **significantly** lower frequency of a composite adverse perinatal outcome, but it did result in a **significantly** lower frequency of cesarean delivery” and it seems like overnight all patients in our system were offered elective inductions of labor at 39 weeks gestational age. But our outcomes have not improved, our unit throughput has been substantially adversely impacted, and I highly suspect that after further study these practices will need to change. I think that highlighting examples like this would help clinicians to better understand the danger of reliance on p values and “statistical significance,” especially in a single study, and instead focus on the results of metanalytic reviews with consistent demonstration of benefit or harm in multiple studies.
+
+Another approach I think would be helpful from the editorial, to bridge the silo between the statistical and clinical worlds, is widely and publicly dispersing information across the clinical realm. Authors cited in the editorial “also urge that the ASA Statement on P-Values and Statistical Significance “be sent to the editor-in-chief of every journal in the natural, behavioral and social sciences for forwarding to their respective editorial boards and stables of manuscript reviewers. That would be a good way to more quickly improve statistical understanding and practice.” (cite) I would add and urge that the Statement should also be sent to every medical school, residency, and fellowship training program – where much scholarly work is generated - to be integrated into educational content. This could help both clinical journals and researchers simultaneously and more rapidly shift the focus from outcomes to rigorous methodology as suggested in the editorial. OK
+
+Lastly, I have to say overall this editorial made me think of a scene from a movie from my formative years. In this scene [Tommy Boy convinces a client not to trust a “guarantee on a box” but a quality product instead](https://youtu.be/mEB7WbTTlu4). The p value and “statistical significance” are that “guarantee on a box,” and like Tommy Boy, we need to convince clinicians not to blindly trust that guarantee, but to instead invest in the quality product of rigorous and reproducible results.
+
+#References
+
+Grobman, W. A., Rice, M. M., Reddy, U. M., Tita, A. T. N., Silver, R. M., Mallett, G., Hill, K., Thom, E. A., El-Sayed, Y. Y., Perez-Delboy, A., Rouse, D. J., Saade, G. R., Boggess, K. A., Chauhan, S. P., Iams, J. D., Chien, E. K., Casey, B. M., Gibbs, R. S., Srinivas, S. K., & Swamy, G. K. (2018). Labor Induction versus Expectant Management in Low-Risk Nulliparous Women. *New England Journal of Medicine*, 379(6), 513–523. https://www.nejm.org/doi/full/10.1056/NEJMoa1800566
+
+Wasserstein, R. L., & Lazar, N. A. (2016). The ASA Statement on p-Values: Context, Process, and Purpose. *The American Statistician*, 70(2), 129–133. https://doi.org/10.1080/00031305.2016.1154108
+
+Wasserstein, R. L., Schirm, A. L. & Lazar, N. A. (2019) Moving to a World Beyond “p \< 0.05”, *The American Statistician*, 73:sup1, 1-19, DOI: 10.1080/00031305.2019.1583913
